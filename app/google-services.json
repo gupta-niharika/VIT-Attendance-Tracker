@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "934063268010",
+    "project_id": "vit-attendance-tracker",
+    "storage_bucket": "vit-attendance-tracker.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:934063268010:android:42b2b160aa7b2b9a0a70d3",
+        "android_client_info": {
+          "package_name": "com.sanikchar.vitattendancetracker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "934063268010-h3e9oj50lvojotpg7bjhqcicmrl1h0b0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBnLD0YSJCDBaQarCscWDngJVhNkH5Bdys"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "934063268010-h3e9oj50lvojotpg7bjhqcicmrl1h0b0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
