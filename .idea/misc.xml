@@ -4,11 +4,12 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/dev/appdev/Vitattendancetracker/app/src/main/res/drawable/bg_login.xml" value="0.19166666666666668" />
+        <entry key="..\:/dev/appdev/Vitattendancetracker/app/src/main/res/drawable/ic_google.xml" value="0.13703703703703704" />
         <entry key="..\:/dev/appdev/Vitattendancetracker/app/src/main/res/layout/activity_login.xml" value="0.22" />
         <entry key="..\:/dev/appdev/Vitattendancetracker/app/src/main/res/layout/activity_main.xml" value="0.17552083333333332" />
         <entry key="..\:/dev/appdev/Vitattendancetracker/app/src/main/res/layout/activity_splash.xml" value="0.16145833333333334" />
         <entry key="..\:/dev/appdev/Vitattendancetracker/app/src/main/res/layout/fragment_login.xml" value="0.22" />
-        <entry key="..\:/dev/appdev/Vitattendancetracker/app/src/main/res/layout/fragment_signup.xml" value="0.16666666666666666" />
+        <entry key="..\:/dev/appdev/Vitattendancetracker/app/src/main/res/layout/fragment_signup.xml" value="0.22" />
         <entry key="..\:/dev/appdev/Vitattendancetracker/app/src/main/res/layout/item_user.xml" value="0.3333333333333333" />
       </map>
     </option>

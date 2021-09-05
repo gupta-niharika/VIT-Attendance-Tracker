@@ -4,7 +4,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.sanikchar.vitattendancetracker.databinding.ActivityLoginBinding
 
-class LoginActivity : AppCompatActivity() {
+class AuthActivity : AppCompatActivity() {
     private lateinit var binding: ActivityLoginBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.VitAttendanceTracker">
         <activity
-            android:name=".LoginActivity"
+            android:name=".AuthActivity"
             android:exported="true" />
 
         <activity
