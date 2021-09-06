@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.sanikchar.vitattendancetracker.LoginFragment"
+        android:name="com.sanikchar.vitattendancetracker.ui.auth.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/signupFragment"
-        android:name="com.sanikchar.vitattendancetracker.SignupFragment"
+        android:name="com.sanikchar.vitattendancetracker.ui.auth.SignupFragment"
         android:label="fragment_signup"
         tools:layout="@layout/fragment_signup" >
         <action
