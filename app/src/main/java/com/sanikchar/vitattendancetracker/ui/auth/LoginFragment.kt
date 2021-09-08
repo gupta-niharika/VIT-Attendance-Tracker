@@ -10,9 +10,13 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.NavHostFragment
+import com.google.android.gms.auth.api.signin.GoogleSignIn
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException
 import com.google.firebase.auth.FirebaseAuthInvalidUserException
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 import com.sanikchar.vitattendancetracker.MainActivity
 import com.sanikchar.vitattendancetracker.R
 import com.sanikchar.vitattendancetracker.databinding.FragmentLoginBinding
@@ -37,6 +41,12 @@ class LoginFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         auth = FirebaseAuth.getInstance()
+
+//        val user = Firebase.auth.currentUser
+//        if (user != null) { //checking if a user is signed in
+//            startActivity(Intent(requireContext(), MainActivity::class.java))
+//            requireActivity().finish()
+//        } else {    //login
 
         binding.apply {
 
@@ -76,7 +86,20 @@ class LoginFragment : Fragment() {
                         }
                 }
             }
+
+//            googlesignin.setOnClickListener {
+//                // Configure Google Sign In
+//                val gso = GoogleSignInOptions
+//                    .Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+//                    .requestIdToken(getString(R.string.default_web_client_id))
+//                    .requestEmail()
+//                    .build()
+//
+//                googleSignInClient = GoogleSignIn.getClient(this, gso)
+//            }
         }
+//        }
+
 
         binding.signUp.setOnClickListener {
             NavHostFragment.findNavController(this)
