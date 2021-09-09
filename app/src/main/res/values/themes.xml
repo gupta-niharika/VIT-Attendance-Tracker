@@ -31,10 +31,10 @@
     </style>
 
     <style name="TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
-        <item name="boxCornerRadiusTopStart">6dp</item>
-        <item name="boxCornerRadiusTopEnd">6dp</item>
-        <item name="boxCornerRadiusBottomEnd">6dp</item>
-        <item name="boxCornerRadiusBottomStart">6dp</item>
+        <item name="boxCornerRadiusTopStart">@dimen/cardCornerRadius</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/cardCornerRadius</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/cardCornerRadius</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/cardCornerRadius</item>
         <item name="boxStrokeWidth">0dp</item>
         <item name="boxStrokeWidthFocused">0dp</item>
     </style>

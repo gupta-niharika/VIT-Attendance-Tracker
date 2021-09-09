@@ -16,27 +16,17 @@ class SplashActivity : AppCompatActivity() {
         setContentView(R.layout.activity_splash)
         GlobalScope.launch {
             delay(1000)
-            //TODO - check if user has logged in, yes -> go to main activity, else take him to login activity
-            FirebaseAuth.getInstance()
-            FirebaseAuth.AuthStateListener {
-                val user = FirebaseAuth.getInstance().currentUser
-                when {
-                    user != null -> {
-                        startActivity(Intent(this@SplashActivity, MainActivity::class.java))
-                        finish()
-                    }
-                    else -> {
-                        startActivity(Intent(this@SplashActivity, AuthActivity::class.java))
-                        finish()
-                    }
+            //check if user has logged in, yes -> go to main activity, else take him to login activity
+            when (FirebaseAuth.getInstance().currentUser) {
+                null -> {
+                    startActivity(Intent(this@SplashActivity, AuthActivity::class.java))
+                    finish()
+                }
+                else -> {
+                    startActivity(Intent(this@SplashActivity, MainActivity::class.java))
+                    finish()
                 }
             }
-            finish()
         }
-
-        startActivity(Intent(this@SplashActivity, MainActivity::class.java))
-        startActivity(Intent(this@SplashActivity, AuthActivity::class.java))
-
-        finish()
     }
 }

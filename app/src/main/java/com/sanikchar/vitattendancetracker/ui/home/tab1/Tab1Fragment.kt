@@ -1,0 +1,31 @@
+package com.sanikchar.vitattendancetracker.ui.home.tab1
+
+import android.os.Bundle
+import android.util.Log
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import android.widget.Toast
+import androidx.fragment.app.Fragment
+import com.sanikchar.vitattendancetracker.databinding.FragmentRecyclerViewBinding
+
+private const val TAG = "Tab1Fragment"
+class Tab1Fragment : Fragment() {
+
+    private lateinit var binding: FragmentRecyclerViewBinding
+
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?,
+    ): View {
+        binding = FragmentRecyclerViewBinding.inflate(inflater, container, false)
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        Toast.makeText(requireContext(), "Tab1", Toast.LENGTH_SHORT).show()
+        Log.i(TAG, "onViewCreated: ")
+    }
+}
