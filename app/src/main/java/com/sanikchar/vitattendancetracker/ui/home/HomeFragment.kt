@@ -1,6 +1,5 @@
 package com.sanikchar.vitattendancetracker.ui.home
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -8,10 +7,13 @@ import android.view.ViewGroup
 import android.widget.PopupMenu
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.viewpager2.adapter.FragmentStateAdapter
+import com.google.android.material.tabs.TabLayoutMediator
 import com.google.firebase.auth.FirebaseAuth
-import com.sanikchar.vitattendancetracker.AuthActivity
 import com.sanikchar.vitattendancetracker.R
 import com.sanikchar.vitattendancetracker.databinding.FragmentHomeBinding
+import com.sanikchar.vitattendancetracker.ui.home.tab1.Tab1Fragment
+import com.sanikchar.vitattendancetracker.ui.home.tab2.Tab2Fragment
 
 private const val TAG = "HomeFragment"
 
@@ -37,9 +39,15 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.apply {
-            val viewPagerAdapter = ViewPagerAdapter(childFragmentManager)
-            viewPager.adapter = viewPagerAdapter
-            tabLayout.setupWithViewPager(viewPager)
+            val viewPagerAdapter = ViewPagerAdapter(this@HomeFragment)
+            viewPager2.adapter = viewPagerAdapter
+            TabLayoutMediator(tabLayout, viewPager2) { tab, position ->
+                tab.text = when (position) {
+                    0 -> "Today's Classes"
+                    else -> "All Classes"
+                }
+            }.attach()
+
             options.setOnClickListener { v ->
                 val popupMenu = PopupMenu(requireContext(), v)
                 val inflater = popupMenu.menuInflater
@@ -60,5 +68,16 @@ class HomeFragment : Fragment() {
                 }
             }
         }
+    }
+
+    class ViewPagerAdapter(fragment: Fragment) : FragmentStateAdapter(fragment) {
+
+        override fun getItemCount(): Int = 2
+
+        override fun createFragment(position: Int): Fragment = when (position) {
+            0 -> Tab1Fragment()
+            else -> Tab2Fragment()
+        }
+
     }
 }

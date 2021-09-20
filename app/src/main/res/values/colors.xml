@@ -1,18 +1,13 @@
-<?xml version="1.0" encoding="utf-8"?>
+<!--?xml version="1.0" encoding="UTF-8"?-->
 <resources>
-    <color name="purple_200">#FFBB86FC</color>
-    <color name="purple_500">#FF6200EE</color>
-    <color name="purple_700">#FF3700B3</color>
-    <color name="teal_200">#FF03DAC5</color>
-    <color name="teal_700">#FF018786</color>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
 
-    <color name="colorPrimary">#4666B9</color>
-    <color name="colorOnPrimary">#FFF</color>
-    <color name="colorSecondary">#D2D2D2</color>
-    <color name="cardBackgroundColor">#F2F2F2</color>
-    <color name="colorOnSecondary">#FFF</color>
-    <color name="colorSecondaryVariant">#CFCFCF</color>
+    <color name="purple">#FF9875B5</color>
+    <color name="white_100">#FFFFFF</color>
+    <color name="white_87">#DEFFFFFF</color>
+    <color name="white_light">#FFF2F2F2</color>
+    <color name="black_29">#FF292929</color>
+    <color name="red">#FFEE9291</color>
+    <color name="blue">#FF5EACCE</color>
+    <color name="orange">#FFE7A97C</color>
 
 </resources>

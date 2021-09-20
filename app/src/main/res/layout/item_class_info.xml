@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="@dimen/margin_medium"
-    app:cardBackgroundColor="@color/cardBackgroundColor"
     app:cardCornerRadius="@dimen/cardCornerRadius"
-    app:contentPadding="@dimen/margin_small">
+    app:contentPadding="@dimen/margin_small"
+    app:cardElevation="4dp">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -17,7 +18,7 @@
             android:id="@+id/classdp"
             android:layout_width="wrap_content"
             android:layout_height="0dp"
-            app:cardBackgroundColor="#FF7B7B"
+            app:cardBackgroundColor="@color/orange"
             app:cardCornerRadius="@dimen/cardCornerRadius"
             app:contentPadding="@dimen/margin_large"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -29,7 +30,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="SN"
-                android:textColor="@color/white"
+                android:textColor="@color/white_light"
                 android:textSize="24sp"
                 android:textStyle="bold" />
         </androidx.cardview.widget.CardView>
@@ -43,27 +44,28 @@
             android:ellipsize="end"
             android:fontFamily="@font/open_sans_semibold"
             android:singleLine="true"
-            android:text="Subject Name"
-            android:textColor="@color/black"
+            android:textColor="@color/black_29"
             android:textSize="18sp"
             android:textStyle="bold"
-            app:layout_constraintEnd_toStartOf="@+id/textView3"
+            app:layout_constraintEnd_toStartOf="@+id/classTime"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toEndOf="@id/classdp"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Subject Name" />
 
         <TextView
+            android:id="@+id/classCode"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/margin_small"
-            android:text="Class Code"
-            android:textColor="@color/black"
+            android:textColor="@color/black_29"
             android:textSize="14sp"
             app:layout_constraintBottom_toTopOf="@+id/linearLayoutCompat2"
-            app:layout_constraintEnd_toStartOf="@+id/textView3"
+            app:layout_constraintEnd_toStartOf="@+id/classTime"
             app:layout_constraintStart_toEndOf="@id/classdp"
             app:layout_constraintTop_toBottomOf="@id/subName"
-            app:layout_constraintVertical_bias="0.2" />
+            app:layout_constraintVertical_bias="0.2"
+            tools:text="Class Code" />
 
         <androidx.appcompat.widget.LinearLayoutCompat
             android:id="@+id/linearLayoutCompat2"
@@ -80,31 +82,32 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Students: "
-                android:textColor="@color/black" />
+                android:textColor="@color/black_29" />
 
             <TextView
+                android:id="@+id/stuCount"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="60"
-                android:textColor="@color/colorPrimary"
-                android:textStyle="bold" />
+                android:textColor="@color/purple"
+                android:textStyle="bold"
+                tools:text="60" />
         </androidx.appcompat.widget.LinearLayoutCompat>
 
 
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/classTime"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical|end|right"
             android:layout_marginTop="@dimen/margin_small"
             android:layout_marginEnd="@dimen/margin_small"
             android:fontFamily="@font/open_sans_semibold"
-            android:text="16:00"
-            android:textColor="@color/colorPrimary"
+            android:textColor="@color/purple"
             android:textSize="24sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="16:00" />
 
         <LinearLayout
             android:id="@+id/linearLayout"
@@ -118,50 +121,35 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="4dp"
-                android:background="@drawable/bg_day_unselected"
                 android:text="M"
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="8sp" />
+                android:theme="@style/day_unselected" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="4dp"
-                android:background="@drawable/bg_day_unselected"
                 android:text="Tu"
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="8sp" />
+                android:theme="@style/day_unselected" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="4dp"
-                android:background="@drawable/bg_day_unselected"
                 android:text="W"
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="8sp" />
+                android:theme="@style/day_unselected" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="4dp"
-                android:background="@drawable/bg_day_unselected"
                 android:text="Th"
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="8sp" />
+                android:theme="@style/day_unselected" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/bg_day_unselected"
                 android:text="F"
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="8sp" />
+                android:theme="@style/day_unselected" />
 
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>

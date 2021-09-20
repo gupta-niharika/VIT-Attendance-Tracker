@@ -1,4 +1,4 @@
-package com.sanikchar.vitattendancetracker.ui.home.tab1
+package com.sanikchar.vitattendancetracker.ui.home.tab2
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
