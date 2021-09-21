@@ -3,31 +3,27 @@ package com.sanikchar.vitattendancetracker.ui.home.tab2
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.sanikchar.vitattendancetracker.R
-import com.sanikchar.vitattendancetracker.databinding.ItemClassInfoBinding
+import com.sanikchar.vitattendancetracker.databinding.ItemClassCardBinding
 import com.sanikchar.vitattendancetracker.model.ClassInfo
 
-class RecyclerViewHolder(private val binding: ItemClassInfoBinding) :
+class RecyclerViewHolder(private val binding: ItemClassCardBinding) :
     RecyclerView.ViewHolder(binding.root) {
 
-    val subName = binding.subName
-    val classCode = binding.classCode
-    val stuCount = binding.stuCount
-    val classTime = binding.classTime
+//    val classTime = binding.classTime
 
-    fun bind(classInfo: ClassInfo) {
-        subName.text = classInfo.subName
-        classCode.text = classInfo.code
-        stuCount.text = classInfo.stuCount.toString()
-        classTime.text = classInfo.startTime.toString()
+    fun bind(classInfo: ClassInfo) {    //binding to the model
+        binding.apply{
+            subName.text = classInfo.subName
+            classCode.text = classInfo.code
+            stuCount.text = classInfo.stuCount.toString()
+        }
+//        classTime.text = classInfo.startTime.toString()
     }
 
     companion object {
         fun create(parent: ViewGroup): RecyclerViewHolder {
-            val view =
-                LayoutInflater.from(parent.context)
-                    .inflate(R.layout.item_class_info, parent, false)
-            return RecyclerViewHolder(ItemClassInfoBinding.bind(view))
+            val binding = ItemClassCardBinding.inflate(LayoutInflater.from(parent.context),parent,false)
+            return RecyclerViewHolder(ItemClassCardBinding.bind(binding.root))
         }
     }
 }

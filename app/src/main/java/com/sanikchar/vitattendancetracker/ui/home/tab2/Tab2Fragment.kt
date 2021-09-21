@@ -8,7 +8,6 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.sanikchar.vitattendancetracker.databinding.FragmentTab2Binding
 import com.sanikchar.vitattendancetracker.model.ClassInfo
-import com.sanikchar.vitattendancetracker.ui.home.tab1.RecyclerAdapter
 import java.sql.Time
 
 class Tab2Fragment : Fragment() {
@@ -77,11 +76,9 @@ class Tab2Fragment : Fragment() {
                 stuCount = 43,
                 startTime = Time(System.currentTimeMillis()),
             ),
-
-            )
-
+        )
         val recyclerAdapter = RecyclerAdapter()
-        recyclerAdapter.classlist = classlist
+        recyclerAdapter.submitList(classlist)
         binding.recyclerView.adapter = recyclerAdapter
 
         binding.fab.setOnClickListener {

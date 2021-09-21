@@ -29,7 +29,6 @@ class Tab1Fragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        Toast.makeText(requireContext(), "Tab1", Toast.LENGTH_SHORT).show()
         Log.i(TAG, "onViewCreated: ")
 
         val classlist = listOf(

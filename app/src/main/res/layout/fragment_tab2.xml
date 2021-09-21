@@ -11,7 +11,8 @@
         android:layout_height="match_parent"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
         app:spanCount="2"
-        tools:listitem="@layout/item_class_info" />
+        android:paddingHorizontal="@dimen/margin_small"
+        tools:listitem="@layout/item_class_card" />
 
     <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
         android:id="@+id/fab"

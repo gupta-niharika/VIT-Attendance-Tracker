@@ -35,7 +35,6 @@
                 android:textStyle="bold" />
         </androidx.cardview.widget.CardView>
 
-
         <TextView
             android:id="@+id/subName"
             android:layout_width="0dp"
