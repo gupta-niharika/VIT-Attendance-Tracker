@@ -9,5 +9,14 @@
         android:id="@+id/homeFragment"
         android:name="com.sanikchar.vitattendancetracker.ui.home.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_addClassFragment"
+            app:destination="@id/addClassFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addClassFragment"
+        android:name="com.sanikchar.vitattendancetracker.ui.home.tab2.addclass.AddClassFragment"
+        android:label="AddClassFragment"
+        tools:layout="@layout/fragment_add_class"/>
 </navigation>

@@ -46,11 +46,20 @@
         <item name="boxStrokeWidthFocused">0dp</item>
     </style>
 
+    <style name="TextInputLayoutOutlined" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxCornerRadiusTopStart">@dimen/cardCornerRadius</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/cardCornerRadius</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/cardCornerRadius</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/cardCornerRadius</item>
+        <item name="boxStrokeColor">@color/purple</item>
+    </style>
+
     <style name="day_unselected">
         <item name="android:textAlignment">center</item>
         <item name="android:textColor">@color/black_29</item>
         <item name="android:textSize">8sp</item>
         <item name="android:background">@drawable/bg_day_unselected</item>
+        <item name="android:gravity">center</item>
     </style>
 
 </resources>

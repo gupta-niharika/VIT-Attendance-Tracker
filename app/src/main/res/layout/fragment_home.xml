@@ -8,7 +8,7 @@
     tools:context=".ui.home.HomeFragment">
 
     <androidx.appcompat.widget.LinearLayoutCompat
-        android:id="@+id/linearLayout"
+        android:id="@+id/days_of_week"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="?attr/colorPrimary"
@@ -52,7 +52,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/linearLayout"
+        app:layout_constraintTop_toBottomOf="@id/days_of_week"
         app:tabIndicatorFullWidth="false"
         app:tabIndicatorHeight="3dp"
         app:tabTextAppearance="@style/TextAppearance.AppCompat.Body1" />

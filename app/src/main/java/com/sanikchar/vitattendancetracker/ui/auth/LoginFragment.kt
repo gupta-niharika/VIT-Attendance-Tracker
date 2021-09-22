@@ -75,8 +75,7 @@ class LoginFragment : Fragment() {
                             .addOnCompleteListener { task ->
                                 progressDialog.dismiss()
                                 if (task.isSuccessful) {
-                                    startActivity(Intent(requireContext(),
-                                        MainActivity::class.java))
+                                    startActivity(Intent(requireContext(), MainActivity::class.java))
                                     requireActivity().finish()
                                 } else {
                                     when (task.exception) {

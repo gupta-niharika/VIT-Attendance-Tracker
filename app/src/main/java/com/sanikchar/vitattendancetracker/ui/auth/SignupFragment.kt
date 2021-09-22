@@ -41,16 +41,15 @@ class SignupFragment : Fragment() {
 
             signUp.setOnClickListener {
 
-
                 val em = email.text.toString().trim().replace(" ", "")
 
-                if (name.text.isNullOrEmpty()) {
+                if (name.text.isNullOrBlank()) {
                     name1.error = "Invalid Name!"
-                } else if (em.isEmpty() || !em.matches(Regex("^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$"))) {
+                } else if (em.isBlank() || !em.matches(Regex("^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$"))) {
                     email1.error = "Invalid Email!"
-                } else if (phone.text.isNullOrEmpty()) {
+                } else if (phone.text.isNullOrBlank()) {
                     phone1.error = "Phone number should be 10 digits!"
-                } else if (password.text.isNullOrEmpty() || password.text.toString().length < 6) {
+                } else if (password.text.isNullOrBlank() || password.text.toString().length < 6) {
                     password1.error = "Invalid Password!"
                 } else {
                     auth
