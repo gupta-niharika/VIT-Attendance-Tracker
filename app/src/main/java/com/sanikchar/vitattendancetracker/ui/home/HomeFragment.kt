@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.PopupMenu
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.NavHostFragment
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.google.android.material.tabs.TabLayoutMediator
 import com.google.firebase.auth.FirebaseAuth
@@ -55,12 +56,18 @@ class HomeFragment : Fragment() {
                 popupMenu.show()
                 popupMenu.setOnMenuItemClickListener {
                     return@setOnMenuItemClickListener when (it.itemId) {
+                        //logout
                         R.id.logout -> {
                             try {
                                 FirebaseAuth.getInstance().signOut()
                             } catch (e: Exception) {
                                 e.printStackTrace()
                             }
+                            true
+                        }
+                        R.id.faqs -> {
+                            NavHostFragment.findNavController(this@HomeFragment)
+                                .navigate(HomeFragmentDirections.actionHomeFragmentToFAQFragment())
                             true
                         }
                         else -> false

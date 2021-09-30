@@ -2,7 +2,6 @@ package com.sanikchar.vitattendancetracker.model
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import java.sql.Time
 
 @Entity
 data class ClassInfo(

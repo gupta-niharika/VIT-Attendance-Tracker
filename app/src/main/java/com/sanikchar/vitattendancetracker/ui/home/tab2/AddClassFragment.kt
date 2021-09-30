@@ -1,4 +1,4 @@
-package com.sanikchar.vitattendancetracker.ui.home.tab2.addclass
+package com.sanikchar.vitattendancetracker.ui.home.tab2
 
 import android.content.res.ColorStateList
 import android.os.Bundle
@@ -41,36 +41,35 @@ class AddClassFragment : Fragment() {
             dayF.setOnClickListener { toggleDay(dayF) }
         }
 
-        binding.apply {
-            save.setOnClickListener {
-                //Input validations
-                if (subName.text.isNullOrBlank()) {
-                    subName.error = "Please enter a valid subject name!"
-                } else if (classCode.text.isNullOrBlank() || !classCode.text!!.matches(Regex("/([A-Z]){3}[0-9]{4}/"))) {
-                    classCode.error = "Please enter the 7 character course code!"
-                } else {
-                    repository = Repository(requireContext())
-                    lifecycleScope.launch {
-                        repository.addClassInfo(
-                            classInfo = ClassInfo(
-                                subName = subName.text.toString(),
-                                code = classCode.text.toString(),
-                                startTime = "16:00",
-                                endTime = "8:00",
-                                days = selectedDays.map {
-                                    when (it.text) {
-                                        "M" -> 0
-                                        "Tu" -> 1
-                                        "W" -> 2
-                                        "Th" -> 3
-                                        "F" -> 4
-                                        else -> -1
-                                    }
-                                }
-                            )
-                        )
-                    }
-                }
+        binding.apply { save.setOnClickListener { insertData() } }
+    }
+
+    private fun FragmentAddClassBinding.insertData(){
+        if (subName.text.isNullOrBlank()) {
+            subName.error = "Please enter a valid subject name!"
+        } else if (classCode.text.isNullOrBlank() || !classCode.text?.matches(Regex("^[A-Z]{3}[0-9]{4}$"))!!) {
+            classCode.error = "Please enter the 7 character course code!"
+        } else {
+            repository = Repository(requireContext())
+            lifecycleScope.launch {
+                repository.addClassInfo(
+                    classInfo = ClassInfo(
+                        subName = subName.text.toString(),
+                        code = classCode.text.toString(),
+                        startTime = "16:00",
+                        endTime = "8:00",
+                        days = selectedDays.map {
+                            when (it.text) {
+                                "M" -> 0
+                                "Tu" -> 1
+                                "W" -> 2
+                                "Th" -> 3
+                                "F" -> 4
+                                else -> -1
+                            }
+                        }
+                    )
+                )
             }
         }
     }
@@ -91,5 +90,4 @@ class AddClassFragment : Fragment() {
             )
         }
     }
-
 }

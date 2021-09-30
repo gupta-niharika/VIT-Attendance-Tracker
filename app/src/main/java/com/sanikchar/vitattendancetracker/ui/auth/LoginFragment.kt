@@ -54,10 +54,10 @@ class LoginFragment : Fragment() {
             startActivity(Intent(requireContext(), MainActivity::class.java))
             requireActivity().finish()
         } else {    //login
-
             binding.apply {
 
                 login.setOnClickListener {
+                    //validations
                     val em = email.text.toString().trim().replace(" ", "")
                     if (em.isEmpty() || !em.matches(Regex("^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$"))) {
                         email1.error = "Invalid Email!"

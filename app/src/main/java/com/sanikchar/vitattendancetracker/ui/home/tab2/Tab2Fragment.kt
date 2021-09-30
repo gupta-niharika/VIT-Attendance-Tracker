@@ -4,13 +4,12 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.fragment.NavHostFragment.findNavController
 import com.sanikchar.vitattendancetracker.R
 import com.sanikchar.vitattendancetracker.databinding.FragmentTab2Binding
-import com.sanikchar.vitattendancetracker.model.ClassInfo
-import java.sql.Time
+import com.sanikchar.vitattendancetracker.ui.home.HomeFragmentDirections
 
 class Tab2Fragment : Fragment() {
 
@@ -27,15 +26,19 @@ class Tab2Fragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        Toast.makeText(requireContext(), "Tab2", Toast.LENGTH_LONG).show()
-
 
         val classAdapter = ClassAdapter()
 
         binding.recyclerView.adapter = classAdapter
 
         binding.fab.setOnClickListener {
-            NavHostFragment.findNavController(this).navigate(R.id.action_homeFragment_to_addClassFragment)
+            findNavController(this)
+                .navigate(HomeFragmentDirections.actionHomeFragmentToAddClassFragment())
         }
+
+//        binding.fab.setOnClickListener {
+//            findNavController(this)
+//                .navigate(Tab2FragmentDirections.actionTab2FragmentToAddClassFragment())
+//        }
     }
 }

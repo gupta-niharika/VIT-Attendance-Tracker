@@ -11,12 +11,34 @@
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
         <action
+            android:id="@+id/action_homeFragment_to_FAQFragment"
+            app:destination="@id/FAQFragment" />
+        <action
             android:id="@+id/action_homeFragment_to_addClassFragment"
             app:destination="@id/addClassFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_studentFragment"
+            app:destination="@id/studentFragment" />
     </fragment>
     <fragment
         android:id="@+id/addClassFragment"
-        android:name="com.sanikchar.vitattendancetracker.ui.home.tab2.addclass.AddClassFragment"
+        android:name="com.sanikchar.vitattendancetracker.ui.home.tab2.AddClassFragment"
         android:label="AddClassFragment"
-        tools:layout="@layout/fragment_add_class"/>
+        tools:layout="@layout/fragment_add_class">
+    </fragment>
+    <fragment
+        android:id="@+id/studentFragment"
+        android:name="com.sanikchar.vitattendancetracker.ui.home.tab2.students.StudentFragment"
+        android:label="StudentFragment"
+        tools:layout="@layout/fragment_student">
+    </fragment>
+    <fragment
+        android:id="@+id/FAQFragment"
+        android:name="com.sanikchar.vitattendancetracker.ui.home.faq.FAQFragment"
+        android:label="FAQFragment"
+        tools:layout="@layout/fragment_faq">
+        <action
+            android:id="@+id/action_FAQFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
 </navigation>
