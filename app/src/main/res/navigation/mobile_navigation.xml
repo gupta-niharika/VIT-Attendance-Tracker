@@ -9,7 +9,7 @@
         android:id="@+id/homeFragment"
         android:name="com.sanikchar.vitattendancetracker.ui.home.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" >
+        tools:layout="@layout/fragment_home">
         <action
             android:id="@+id/action_homeFragment_to_FAQFragment"
             app:destination="@id/FAQFragment" />
@@ -22,16 +22,14 @@
     </fragment>
     <fragment
         android:id="@+id/addClassFragment"
-        android:name="com.sanikchar.vitattendancetracker.ui.home.tab2.AddClassFragment"
+        android:name="com.sanikchar.vitattendancetracker.ui.home.tab2.addClass.AddClassFragment"
         android:label="AddClassFragment"
-        tools:layout="@layout/fragment_add_class">
-    </fragment>
+        tools:layout="@layout/fragment_add_class" />
     <fragment
         android:id="@+id/studentFragment"
         android:name="com.sanikchar.vitattendancetracker.ui.home.tab2.students.StudentFragment"
         android:label="StudentFragment"
-        tools:layout="@layout/fragment_student">
-    </fragment>
+        tools:layout="@layout/fragment_student" />
     <fragment
         android:id="@+id/FAQFragment"
         android:name="com.sanikchar.vitattendancetracker.ui.home.faq.FAQFragment"

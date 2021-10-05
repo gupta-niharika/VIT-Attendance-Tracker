@@ -5,9 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.NavHostFragment.findNavController
-import com.sanikchar.vitattendancetracker.R
 import com.sanikchar.vitattendancetracker.databinding.FragmentTab2Binding
 import com.sanikchar.vitattendancetracker.ui.home.HomeFragmentDirections
 

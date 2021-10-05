@@ -37,6 +37,20 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/TextInputLayoutOutlined"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Class Code"
+            android:paddingVertical="@dimen/margin_medium">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/classSlot"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -65,6 +79,7 @@
 
                     <TimePicker
                         android:id="@+id/startTime"
+
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:amPmTextColor="#FFF"
@@ -81,6 +96,7 @@
 
                     <TimePicker
                         android:id="@+id/endTime"
+                        style="@style/ThemeOverlay.MaterialComponents.TimePicker"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:amPmTextColor="#FFF"
